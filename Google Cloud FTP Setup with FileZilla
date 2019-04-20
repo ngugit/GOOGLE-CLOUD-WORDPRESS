@@ -1,0 +1,38 @@
+//Google Cloud FTP Setup with FileZilla 
+//There are 7 steps in this tutorial:
+1. Download PuTTY and FileZilla
+
+2. Generate SSH Keys
+
+3. Copy and save the keys
+After your SSH Key files have been generated, copy the public key text from the top box,
+and download the private key file by clicking the “Save private key” button.
+
+4. Paste Public Key in Google Cloud
+From the hamburger menu in the upper left-hand corner of your Google Cloud Platform dashboard, 
+navigate to Compute Engine > Metadata > SSH Keys. Click the “Edit” button.
+Scroll to the bottom of the “Edit” page, click the “Add item” button, 
+and paste the Public Key text that you copied in Step 3 into the box. Finally, click “Save”.
+
+5. Upload Private Key in FileZilla
+Open FileZilla, and navigate to Edit > Settings.
+From the left-hand column of the settings menu, navigate to Connection > FTP > SFTP. 
+Click the “Add key file…” button, and select the private key file that you downloaded in Step 3.
+
+6. Establish Connection to Google Cloud
+
+In order to establish a connection between Google Cloud and Filezilla, you will need both the IP Address to your instance, 
+and the username for your SSH Key.
+
+Back in the FileZilla dashboard, type “sftp://” followed by the IP Address of the instance you wish to connect to. In the username field, 
+paste your PuTTY username.
+Lastly, click the “Quickconnect” button.
+
+7. Navigate to your root directory
+
+If you’re running the Click-to-Deploy version of WordPress on Google Cloud, your root directory is located at:/var/www/html
+
+
+
+//https://www.onepagezen.com/google-cloud-ftp-filezilla-quick-start/
+

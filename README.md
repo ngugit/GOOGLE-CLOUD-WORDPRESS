@@ -9,3 +9,11 @@
 
 ////2019-4-19
 补充一下网站搭好的邮箱问题。邮件服务器如果用网易企业免费版，在GOOGLE设MX，提示记录无效。可以利用cloudflare,设置MX
+
+// 访问gcp文件的方法
+用 Putty key Generator Generate SSH Keys
+save the privatekeys and copy the public key in Google Cloud  路径Compute Engine > Metadata > SSH Keys. Click the “Edit” button.
+Open FileZilla, and navigate to Edit > Settings.进入 > FTP > SFTP.增加private key.
+Back in the FileZilla dashboard, type “sftp://” followed by the IP Address of the instance you wish to connect to. In the username field, paste your username,which is displayed in both the key comment section of the putty dashboard and at the end of your public key text.
+Lastly, click the “Quickconnect” button.
+其中一键部署中WORDPRESS文件在/var/www/html

@@ -4,7 +4,13 @@
 2、设置静态IP: 路径网络->vpc网络->外部IP</br>
 3、域名绑定主机： 开启云端的Cloud DNS API->创建DNS ZONE，添加记录（A，CNAME)，copy自动生成NS记录，paste到域名服务商修改服务器地址。</br>
  在WordPress后台， Settings > General. change the URL fields from your IP address to the domain name.</br>
-4、免费证书  方法略，有最新的 </br>  
+4、免费证书  方法略，有最新的 </br> 
+进入vm实例，ssh进
+lsb_release -a       //获得系统版本 debian 9.7 </br> 
+登陆 certbot.eff.org      选 apache 根据版本  debian 按上面一步步来即可 </br> 
+
+
+
 5、Update WordPress URLs，在setting 里将http改为https
 
 ////2019-4-19
